@@ -7,7 +7,6 @@ import ContactSection from '../components/sections/ContactSection/ContactSection
 const HomePage: React.FC = () => {
   return (
     <>
-      <Header />
       <AboutSection />
       <ProjectsSection />
       <ContactSection />
