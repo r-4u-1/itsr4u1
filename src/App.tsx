@@ -1,13 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import "./App.css";
+import ProjectSection from './components/sections/ProjectsSection/ProjectsSection';
+import ContactSection from './components/sections/ContactSection/ContactSection';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-     its r4u1
-    </div>
+    <>
+    <Routes>
+        <Route path="/" element={< HomePage />} />
+        <Route path="/about" element={< AboutPage />} />
+        <Route path="/projects" element={< ProjectSection />} />
+        <Route path="/contact" element={< ContactSection />} />
+
+        {/* Add more routes as needed */}
+    </Routes>
+    </>
   );
-}
+};
 
 export default App;
